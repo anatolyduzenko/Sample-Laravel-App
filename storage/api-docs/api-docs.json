@@ -1,0 +1,88 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "AD Admin Sample API",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/products": {
+            "get": {
+                "tags": [
+                    "Products"
+                ],
+                "summary": "List Products",
+                "description": "Display a listing of the Products.",
+                "operationId": "List Products",
+                "parameters": [
+                    {
+                        "name": "skip",
+                        "in": "path",
+                        "description": "Skip prodcuts",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "examples": {
+                            "integer": {
+                                "summary": "An integer value",
+                                "value": "1"
+                            }
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "path",
+                        "description": "Limit prodcuts",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "examples": {
+                            "integer": {
+                                "summary": "An integer value",
+                                "value": "1"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Response Message"
+                    }
+                }
+            }
+        },
+        "/api/products/{id}": {
+            "get": {
+                "tags": [
+                    "Products"
+                ],
+                "summary": "Show Product",
+                "description": "Display detailed information for product.",
+                "operationId": "Show Product",
+                "parameters": [
+                    {
+                        "name": "skip",
+                        "in": "path",
+                        "description": "Product ID",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "examples": {
+                            "integer": {
+                                "summary": "An integer value",
+                                "value": "1"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Response Message"
+                    }
+                }
+            }
+        }
+    }
+}
