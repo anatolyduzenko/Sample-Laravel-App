@@ -18,7 +18,7 @@ This is a sample admin application with integrated file manager. Based on Larave
 - Migrate the database by running the `php artisan migrate` command.
 - Seed the database - `php artisan db:seed`
 - Create a navigation menu - `php artisan db:seed --class=NavbarSeeder`
-- (Optiona) Fill the sample data - `php artisan db:seed --class=ProductSeeder`
+- (Optional) Fill the sample data - `php artisan db:seed --class=ProductSeeder`
 - Publish assets for File Manager `php artisan vendor:publish --tag=fm-assets` and Swagger `php artisan vendor:publish --provider "L5Swagger\L5SwaggerServiceProvider"`
 - Login creadentials for testing user are <b>admin@example.com</b>/<b>password</p>
 
