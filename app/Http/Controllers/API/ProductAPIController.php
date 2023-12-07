@@ -78,7 +78,7 @@ class ProductAPIController extends AppBaseController
     }
 
     /**
-     * Display a listing of the Products.
+     * Display the details of the Product.
      * GET /products
      * @OA\Get(
      *      path="/api/products/{id}",
