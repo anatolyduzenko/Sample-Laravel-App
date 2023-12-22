@@ -25,7 +25,7 @@ Route::middleware('auth')->group(function () {
         return view('dashboard');
     });
     
-    // Route::resource('products', App\Http\Controllers\ProductController::class);
+    Route::resource('products', App\Http\Controllers\ProductController::class);
     Route::resource('file-manager', App\Http\Controllers\FileManagerController::class);
     
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

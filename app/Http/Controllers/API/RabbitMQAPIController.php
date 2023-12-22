@@ -57,10 +57,9 @@ class RabbitMQAPIController extends AppBaseController
         $channel = $connection->channel();
         $channel->queue_declare($channel_name, false, false, false, false);
 
-        $message = $channel->basic_get($channel_name);
-        $channel->basic_ack($message->delivery_info['delivery_tag']);
-
         try {
+            $message = $channel->basic_get($channel_name);
+            $channel->basic_ack($message->delivery_info['delivery_tag']);
             $channel->close();
         } catch (\Throwable $exception) {
             return $this->sendError('Unexpected error: '.$exception->getMessage(), 500);

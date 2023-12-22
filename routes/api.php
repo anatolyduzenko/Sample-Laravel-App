@@ -18,8 +18,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::resource('products', App\Http\Controllers\API\ProductAPIController::class)
-    ->except(['create', 'edit', 'update', 'store', 'destroy']);
+Route::name('api.')->group(function(){
+    Route::resource('products', App\Http\Controllers\API\ProductAPIController::class)
+        ->except(['create', 'edit', 'update', 'store', 'destroy']);
 
-Route::resource('rabbitmq', App\Http\Controllers\API\RabbitMQAPIController::class)
-    ->except(['index', 'create']);
+    Route::resource('rabbitmq', App\Http\Controllers\API\RabbitMQAPIController::class)
+        ->except(['index', 'create']);
+});
